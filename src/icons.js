@@ -8,6 +8,9 @@ export const icons = {
   mail: wrap(
     '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/>'
   ),
+  fax: wrap(
+    '<path d="M7 8V4h8l3 3v1"/><rect x="3" y="8" width="18" height="7" rx="1.5"/><circle cx="17.3" cy="11.2" r=".9" fill="currentColor" stroke="none"/><path d="M7 15v5h10v-5"/>'
+  ),
   mapPin: wrap(
     '<path d="M20 10.5c0 6-8 12.5-8 12.5S4 16.5 4 10.5a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10.5" r="2.7"/>'
   ),

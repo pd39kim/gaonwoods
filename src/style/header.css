@@ -94,12 +94,6 @@
   color: var(--color-accent);
 }
 
-.header__cta {
-  display: none;
-  padding: 11px 20px;
-  font-size: 14px;
-}
-
 .header__toggle {
   display: inline-flex;
   align-items: center;
@@ -150,9 +144,6 @@
     display: flex;
   }
   .header__tel {
-    display: inline-flex;
-  }
-  .header__cta {
     display: inline-flex;
   }
   .header__toggle {

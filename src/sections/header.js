@@ -24,7 +24,6 @@ export function renderHeader() {
           <a href="tel:${site.phone}" class="header__tel" aria-label="전화 문의">
             ${icons.phone}<span>${site.phoneDisplay}</span>
           </a>
-          <a href="#contact" class="btn btn--primary header__cta">${content.header.cta}</a>
           <button type="button" class="header__toggle" id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">
             ${icons.menu}
           </button>

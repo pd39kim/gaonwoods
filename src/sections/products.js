@@ -23,7 +23,7 @@ export function renderProducts() {
             </button>
             <div class="product-card__specs">
               <div class="product-card__specs-inner">
-                <p class="product-card__spec-unit">${products.specUnit}</p>
+                <p class="product-card__spec-unit">${cat.specUnit || products.specUnit}</p>
                 <ul>${specs}</ul>
               </div>
             </div>

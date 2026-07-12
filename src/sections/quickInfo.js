@@ -18,10 +18,6 @@ export function renderQuickInfo() {
     <section class="quick-info">
       <div class="container">
         <ul class="quick-info__grid">${cards}</ul>
-        <div class="quick-info__hint">
-          <strong>견적 요청 시 있으면 좋은 정보</strong>
-          <span>${quickInfo.quoteHint}</span>
-        </div>
       </div>
     </section>
   `;

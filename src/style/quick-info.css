@@ -44,18 +44,6 @@
   line-height: 1.7;
 }
 
-.quick-info__hint {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: 24px;
-  padding: 18px 22px;
-  border-radius: var(--radius);
-  background: var(--color-accent-soft);
-  color: var(--color-accent-dark);
-  font-size: 14px;
-}
-
 @media (min-width: 700px) {
   .quick-info__grid {
     grid-template-columns: repeat(3, 1fr);
