@@ -1,0 +1,30 @@
+:root {
+  /* Colors */
+  --color-bg: #f4f2ee;
+  --color-bg-alt: #ece9e2;
+  --color-surface: #ffffff;
+  --color-ink: #1e1c1a;
+  --color-ink-soft: #605c56;
+  --color-line: rgba(30, 28, 26, 0.12);
+  --color-accent: #c1611f;
+  --color-accent-dark: #9c4d17;
+  --color-accent-soft: rgba(193, 97, 31, 0.12);
+  --color-dark: #1e1c1a;
+  --color-dark-ink: #f4f2ee;
+  --color-dark-ink-soft: #b8b3aa;
+  --color-dark-line: rgba(244, 242, 238, 0.14);
+
+  /* Type */
+  --font-sans: "Pretendard", "Noto Sans KR", -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+
+  /* Layout */
+  --max-width: 1160px;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --section-pad-desktop: 120px;
+  --section-pad-mobile: 72px;
+  --shadow-soft: 0 18px 40px rgba(30, 28, 26, 0.08);
+
+  color-scheme: light;
+}
