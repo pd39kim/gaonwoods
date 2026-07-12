@@ -87,6 +87,7 @@ export function setupFacilityCarousel() {
   let index = 0;
   let autoplayTimer = null;
   let resumeTimer = null;
+  let inView = false;
 
   const updateDots = () => {
     dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
@@ -95,11 +96,10 @@ export function setupFacilityCarousel() {
   const goTo = (i) => {
     if (!slides.length) return;
     index = ((i % slides.length) + slides.length) % slides.length;
-    slides[index].scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "nearest",
-    });
+    const slide = slides[index];
+    const target =
+      slide.offsetLeft - (track.clientWidth - slide.clientWidth) / 2;
+    track.scrollTo({ left: target, behavior: "smooth" });
     updateDots();
   };
 
@@ -134,7 +134,7 @@ export function setupFacilityCarousel() {
     stopAutoplay();
     clearTimeout(resumeTimer);
     resumeTimer = setTimeout(() => {
-      if (mq.matches) startAutoplay();
+      if (mq.matches && inView) startAutoplay();
     }, RESUME_DELAY_MS);
   };
 
@@ -159,7 +159,7 @@ export function setupFacilityCarousel() {
   });
 
   const applyMode = () => {
-    if (mq.matches) {
+    if (mq.matches && inView) {
       startAutoplay();
     } else {
       stopAutoplay();
@@ -167,8 +167,16 @@ export function setupFacilityCarousel() {
     }
   };
 
+  const visibilityObserver = new IntersectionObserver(
+    ([entry]) => {
+      inView = entry.isIntersecting;
+      applyMode();
+    },
+    { threshold: 0.4 }
+  );
+  visibilityObserver.observe(track);
+
   mq.addEventListener("change", applyMode);
-  applyMode();
   updateDots();
 }
 
