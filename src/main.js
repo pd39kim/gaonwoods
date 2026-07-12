@@ -26,6 +26,7 @@ import {
   setupSpecToggles,
   setupBackToTop,
   setupReveal,
+  setupFacilityCarousel,
 } from "./interactions.js";
 
 document.querySelector("#app").innerHTML = `
@@ -48,3 +49,4 @@ setupScrollSpy();
 setupSpecToggles();
 setupBackToTop();
 setupReveal();
+setupFacilityCarousel();

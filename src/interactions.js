@@ -71,6 +71,79 @@ export function setupBackToTop() {
   });
 }
 
+export function setupFacilityCarousel() {
+  const track = document.querySelector(".facility__grid");
+  if (!track) return;
+
+  const mq = window.matchMedia("(max-width: 599px)");
+  const AUTOPLAY_MS = 3200;
+  const RESUME_DELAY_MS = 4000;
+
+  let slides = Array.from(track.children);
+  let index = 0;
+  let autoplayTimer = null;
+  let resumeTimer = null;
+
+  const goTo = (i) => {
+    if (!slides.length) return;
+    index = ((i % slides.length) + slides.length) % slides.length;
+    slides[index].scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest",
+    });
+  };
+
+  const stopAutoplay = () => {
+    clearInterval(autoplayTimer);
+    autoplayTimer = null;
+  };
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    autoplayTimer = setInterval(() => goTo(index + 1), AUTOPLAY_MS);
+  };
+
+  const syncIndexFromScroll = () => {
+    const trackRect = track.getBoundingClientRect();
+    const center = trackRect.left + trackRect.width / 2;
+    let closest = 0;
+    let closestDist = Infinity;
+    slides.forEach((el, i) => {
+      const r = el.getBoundingClientRect();
+      const dist = Math.abs(r.left + r.width / 2 - center);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closest = i;
+      }
+    });
+    index = closest;
+  };
+
+  const pauseThenResume = () => {
+    stopAutoplay();
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(() => {
+      if (mq.matches) startAutoplay();
+    }, RESUME_DELAY_MS);
+  };
+
+  track.addEventListener("scroll", syncIndexFromScroll, { passive: true });
+  track.addEventListener("pointerdown", pauseThenResume);
+
+  const applyMode = () => {
+    if (mq.matches) {
+      startAutoplay();
+    } else {
+      stopAutoplay();
+      clearTimeout(resumeTimer);
+    }
+  };
+
+  mq.addEventListener("change", applyMode);
+  applyMode();
+}
+
 export function setupReveal() {
   const targets = document.querySelectorAll(
     ".about, .facility, .products, .contact, .quick-info"
