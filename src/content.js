@@ -13,6 +13,8 @@ export const site = {
   kakaoUrl: "https://pf.kakao.com/_FzqEX",
   naverMapUrl:
     "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%20%EA%B9%80%ED%8F%AC%EC%8B%9C%20%EC%9B%94%EA%B3%B6%EB%A9%B4%20%EC%9B%94%ED%95%98%EB%A1%9C%20160-12",
+  kakaoMapUrl:
+    "https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%20%EA%B9%80%ED%8F%AC%EC%8B%9C%20%EC%9B%94%EA%B3%B6%EB%A9%B4%20%EC%9B%94%ED%95%98%EB%A1%9C%20160-12",
   bizName: "가온지주목",
   ceo: "양명석",
   bizRegNo: "487-86-00593",
@@ -100,7 +102,7 @@ export const content = {
     eyebrow: "Facility",
     title: "생산시설",
     desc:
-      "1996년 설립 이후 조경 지주목을 전문 생산해 온 가온지주목의 실제 생산·적재 환경입니다. 대량 생산 설비와 자체 가공 시스템을 운영하고 있습니다.",
+      "1996년 설립 이후 조경 지주목을 전문 생산해 온 가온지주목의 실제 생산·적재 환경입니다.<br />대량 생산 설비와 자체 가공 시스템을 운영하고 있습니다.",
     gallery: [
       { src: "factory-exterior.jpg", caption: "가온지주목 외부 전경" },
       {
@@ -207,13 +209,8 @@ export const content = {
           { src: "bamboo-horizontal-1.jpg", alt: "대나무 지주목 연결 구조 1" },
           { src: "bamboo-horizontal-2.jpg", alt: "대나무 지주목 연결 구조 2" },
         ],
-        specUnit: "단위: 약 6M",
-        specs: [
-          "1단당 7속(개)",
-          "1단당 10속(개)",
-          "1단당 15속(개)",
-          "두께에 따라 갯수 다름",
-        ],
+        specUnit: "단위: 약 6M (두께에 따라 갯수 다름)",
+        specs: ["1단당 7속(개)", "1단당 10속(개)", "1단당 15속(개)"],
       },
     ],
     extraTitle: "부자재",
@@ -230,7 +227,7 @@ export const content = {
       "견적 요청 시 아래 정보를 함께 보내주시면 빠르게 안내해 드립니다",
     quoteHint: "제품명(형태) / 규격 / 수량 / 납품지(지역 또는 현장 주소) / 희망 납기",
     mapNote:
-      "네이버 지도에서 “가온지주목” 또는 상기 주소로 검색하시면 위치 확인이 가능합니다.",
+      "카카오맵에서 “가온지주목” 또는 상기 주소로 검색하시면 위치 확인이 가능합니다.",
   },
 
   footer: {

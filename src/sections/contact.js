@@ -37,7 +37,7 @@ export function renderContact() {
             <p class="contact__address">${icons.mapPin}<span>${site.address}</span></p>
             <div class="contact__map">
               <iframe
-                src="${site.naverMapUrl}"
+                src="${site.kakaoMapUrl}"
                 title="${site.name} 위치 지도"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -45,7 +45,7 @@ export function renderContact() {
             </div>
             <p class="contact__map-note">${contact.mapNote}</p>
             <div class="contact__btns">
-              <a href="${site.naverMapUrl}" target="_blank" rel="noopener" class="btn btn--ghost-dark">${icons.mapPin}<span>네이버 지도</span></a>
+              <a href="${site.kakaoMapUrl}" target="_blank" rel="noopener" class="btn btn--ghost-dark">${icons.mapPin}<span>카카오맵</span></a>
               <a href="#top" class="btn btn--ghost-dark">${icons.arrowUp}<span>맨 위로</span></a>
             </div>
           </div>
