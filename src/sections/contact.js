@@ -40,7 +40,7 @@ export function renderContact() {
             </div>
             <p class="contact__map-note">${contact.mapNote}</p>
             <div class="contact__btns">
-              <a href="${site.googleMapUrl}" target="_blank" rel="noopener" class="btn btn--ghost-dark">${icons.mapPin}<span>구글 지도</span></a>
+              <a href="${site.naverMapUrl}" target="_blank" rel="noopener" class="btn btn--ghost-dark">${icons.mapPin}<span>네이버 지도</span></a>
               <a href="#top" class="btn btn--ghost-dark">${icons.arrowUp}<span>맨 위로</span></a>
             </div>
           </div>

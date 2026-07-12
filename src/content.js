@@ -13,6 +13,8 @@ export const site = {
   kakaoUrl: "https://pf.kakao.com/_FzqEX",
   googleMapUrl:
     "https://www.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EA%B9%80%ED%8F%AC%EC%8B%9C%20%EC%9B%94%EA%B3%B6%EB%A9%B4%20%EC%9B%94%ED%95%98%EB%A1%9C%20160-12",
+  naverMapUrl:
+    "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%20%EA%B9%80%ED%8F%AC%EC%8B%9C%20%EC%9B%94%EA%B3%B6%EB%A9%B4%20%EC%9B%94%ED%95%98%EB%A1%9C%20160-12",
   bizName: "가온지주목",
   ceo: "양명석",
   bizRegNo: "487-86-00593",
@@ -141,7 +143,7 @@ export const content = {
   products: {
     eyebrow: "Products",
     title: "제품안내",
-    desc: "현장 규모와 수목 종류에 맞는 지주목을 규격별로 생산합니다. 카드를 눌러 규격표를 확인하세요.",
+    desc: "현장 규모와 수목 종류에 맞는 지주목을 규격별로 생산합니다. “규격 보기”를 눌러 규격표를 확인하세요.",
     categories: [
       {
         id: "tripod",
