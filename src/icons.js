@@ -24,6 +24,8 @@ export const icons = {
   menu: wrap('<path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/>'),
   close: wrap('<path d="m6 6 12 12"/><path d="m18 6-12 12"/>'),
   chevronDown: wrap('<path d="m6 9 6 6 6-6"/>'),
+  chevronLeft: wrap('<path d="m15 6-6 6 6 6"/>'),
+  chevronRight: wrap('<path d="m9 6 6 6-6 6"/>'),
   quote: wrap(
     '<path d="M7 8c-1.7 0-3 1.3-3 3v5h5v-5H6c0-1.1.9-2 2-2V8Z"/><path d="M16 8c-1.7 0-3 1.3-3 3v5h5v-5h-3c0-1.1.9-2 2-2V8Z"/>'
   ),

@@ -75,6 +75,10 @@ export function setupFacilityCarousel() {
   const track = document.querySelector(".facility__grid");
   if (!track) return;
 
+  const prevBtn = document.querySelector("[data-facility-prev]");
+  const nextBtn = document.querySelector("[data-facility-next]");
+  const dots = Array.from(document.querySelectorAll("[data-facility-dot]"));
+
   const mq = window.matchMedia("(max-width: 599px)");
   const AUTOPLAY_MS = 3200;
   const RESUME_DELAY_MS = 4000;
@@ -84,6 +88,10 @@ export function setupFacilityCarousel() {
   let autoplayTimer = null;
   let resumeTimer = null;
 
+  const updateDots = () => {
+    dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index));
+  };
+
   const goTo = (i) => {
     if (!slides.length) return;
     index = ((i % slides.length) + slides.length) % slides.length;
@@ -92,6 +100,7 @@ export function setupFacilityCarousel() {
       inline: "center",
       block: "nearest",
     });
+    updateDots();
   };
 
   const stopAutoplay = () => {
@@ -118,6 +127,7 @@ export function setupFacilityCarousel() {
       }
     });
     index = closest;
+    updateDots();
   };
 
   const pauseThenResume = () => {
@@ -131,6 +141,23 @@ export function setupFacilityCarousel() {
   track.addEventListener("scroll", syncIndexFromScroll, { passive: true });
   track.addEventListener("pointerdown", pauseThenResume);
 
+  prevBtn?.addEventListener("click", () => {
+    goTo(index - 1);
+    pauseThenResume();
+  });
+
+  nextBtn?.addEventListener("click", () => {
+    goTo(index + 1);
+    pauseThenResume();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      goTo(i);
+      pauseThenResume();
+    });
+  });
+
   const applyMode = () => {
     if (mq.matches) {
       startAutoplay();
@@ -142,6 +169,7 @@ export function setupFacilityCarousel() {
 
   mq.addEventListener("change", applyMode);
   applyMode();
+  updateDots();
 }
 
 export function setupReveal() {
