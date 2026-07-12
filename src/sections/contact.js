@@ -13,6 +13,11 @@ export function renderContact() {
           <p class="section-desc">${contact.desc}</p>
         </div>
 
+        <div class="contact__hint">
+          <strong>${contact.quoteHintTitle}</strong>
+          <span>${contact.quoteHint}</span>
+        </div>
+
         <div class="contact__grid">
           <div class="contact__card">
             <span class="contact__label">대표 연락처</span>
@@ -32,7 +37,7 @@ export function renderContact() {
             <p class="contact__address">${icons.mapPin}<span>${site.address}</span></p>
             <div class="contact__map">
               <iframe
-                src="https://www.google.com/maps?q=${encodeURIComponent(site.address)}&output=embed"
+                src="${site.naverMapUrl}"
                 title="${site.name} 위치 지도"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -44,11 +49,6 @@ export function renderContact() {
               <a href="#top" class="btn btn--ghost-dark">${icons.arrowUp}<span>맨 위로</span></a>
             </div>
           </div>
-        </div>
-
-        <div class="contact__hint">
-          <strong>${contact.quoteHintTitle}</strong>
-          <span>${contact.quoteHint}</span>
         </div>
       </div>
     </section>

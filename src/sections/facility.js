@@ -6,8 +6,8 @@ export function renderFacility() {
 
   const gallery = facility.gallery
     .map(
-      (item, i) => `
-      <figure class="facility__item facility__item--${i === 0 ? "wide" : "normal"}">
+      (item) => `
+      <figure class="facility__item">
         <img src="${photos[item.src]}" alt="${item.caption}" loading="lazy" />
         <figcaption>${item.caption}</figcaption>
       </figure>

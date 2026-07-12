@@ -2,6 +2,7 @@
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  padding-bottom: 50px;
 }
 
 .about.is-revealed {
@@ -49,6 +50,11 @@
 .about__stat-label {
   font-size: 13px;
   color: var(--color-ink-soft);
+}
+
+.about__history {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .about__history-title {
