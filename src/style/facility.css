@@ -13,7 +13,7 @@
 .facility__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px;
+  gap: 6px;
 }
 
 .facility__item {
