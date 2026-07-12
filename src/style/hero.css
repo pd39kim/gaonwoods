@@ -99,3 +99,69 @@
     padding-bottom: 96px;
   }
 }
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__tag,
+.hero__line,
+.hero__desc,
+.hero__badges,
+.hero__actions,
+.hero__note {
+  opacity: 0;
+  animation: hero-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero__tag {
+  animation-delay: 0.1s;
+}
+
+.hero__line:nth-child(1) {
+  animation-delay: 0.24s;
+}
+
+.hero__line:nth-child(2) {
+  animation-delay: 0.38s;
+}
+
+.hero__line:nth-child(3) {
+  animation-delay: 0.52s;
+}
+
+.hero__desc {
+  animation-delay: 0.68s;
+}
+
+.hero__badges {
+  animation-delay: 0.82s;
+}
+
+.hero__actions {
+  animation-delay: 0.96s;
+}
+
+.hero__note {
+  animation-delay: 1.1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__tag,
+  .hero__line,
+  .hero__desc,
+  .hero__badges,
+  .hero__actions,
+  .hero__note {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

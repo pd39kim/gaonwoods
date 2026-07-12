@@ -8,7 +8,10 @@ export function renderProducts() {
   const cards = products.categories
     .map((cat) => {
       const images = cat.images
-        .map((img) => `<img src="${photos[img.src]}" alt="${img.alt}" loading="lazy" />`)
+        .map(
+          (img) =>
+            `<div class="product-card__img"><img src="${photos[img.src]}" alt="${img.alt}" loading="lazy" /></div>`
+        )
         .join("");
       const specs = cat.specs.map((s) => `<li>${s}</li>`).join("");
 
