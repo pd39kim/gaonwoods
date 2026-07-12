@@ -14,6 +14,10 @@ export function renderAbout() {
     )
     .join("");
 
+  const leadLines = about.leadLines
+    .map((line) => `<span class="about__lead-line">${line}</span>`)
+    .join("");
+
   const history = about.history
     .map(
       (row) => `
@@ -33,7 +37,7 @@ export function renderAbout() {
         <div class="about__intro">
           <p class="eyebrow">${about.eyebrow}</p>
           <h2 class="section-title">${about.title}</h2>
-          <p class="about__lead">${about.lead}</p>
+          <p class="about__lead">${leadLines}</p>
           <div class="about__stats">${stats}</div>
         </div>
 

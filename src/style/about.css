@@ -24,6 +24,14 @@
   max-width: 560px;
 }
 
+.about__lead-line {
+  display: block;
+}
+
+.about__lead-line:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .about__stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
