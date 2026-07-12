@@ -11,10 +11,8 @@ export const site = {
   email: "inill9123@naver.com",
   address: "경기 김포시 월곶면 월하로 160-12",
   kakaoUrl: "https://pf.kakao.com/_FzqEX",
-  naverMapUrl:
-    "https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%20%EA%B9%80%ED%8F%AC%EC%8B%9C%20%EC%9B%94%EA%B3%B6%EB%A9%B4%20%EC%9B%94%ED%95%98%EB%A1%9C%20160-12",
-  kakaoMapUrl:
-    "https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%20%EA%B9%80%ED%8F%AC%EC%8B%9C%20%EC%9B%94%EA%B3%B6%EB%A9%B4%20%EC%9B%94%ED%95%98%EB%A1%9C%20160-12",
+  googleMapUrl:
+    "https://www.google.com/maps?q=%EA%B2%BD%EA%B8%B0%20%EA%B9%80%ED%8F%AC%EC%8B%9C%20%EC%9B%94%EA%B3%B6%EB%A9%B4%20%EC%9B%94%ED%95%98%EB%A1%9C%20160-12",
   bizName: "가온지주목",
   ceo: "양명석",
   bizRegNo: "487-86-00593",
@@ -222,12 +220,8 @@ export const content = {
   contact: {
     eyebrow: "Contact",
     title: "견적/문의",
-    desc: "전화로 문의주시면 더 빠르게 안내해 드립니다.",
-    quoteHintTitle:
-      "견적 요청 시 아래 정보를 함께 보내주시면 빠르게 안내해 드립니다",
-    quoteHint: "제품명(형태) / 규격 / 수량 / 납품지(지역 또는 현장 주소) / 희망 납기",
-    mapNote:
-      "카카오맵에서 “가온지주목” 또는 상기 주소로 검색하시면 위치 확인이 가능합니다.",
+    desc: "견적 요청 시 아래 정보를 준비해 전화로 문의하시면 더욱 빠르게 안내해 드립니다.<br />제품명(형태) / 규격 / 수량 / 납품지(지역 또는 현장 주소) / 희망 납기",
+    mapNote: "구글 지도에서 상기 주소로 검색하시면 위치 확인이 가능합니다.",
   },
 
   footer: {
