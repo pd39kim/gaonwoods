@@ -80,6 +80,14 @@ export const content = {
     historyTitle: "연혁",
     history: [
       {
+        year: "2024",
+        items: ["정부 지원 스마트공방 생산설비 및 친환경 ESS 도입"],
+      },
+      {
+        year: "2016",
+        items: ["생산라인 확장", "(주)가온지주목 법인 전환"],
+      },
+      {
         year: "2015",
         items: ["김포시 월곶면 공장 확장 이전", "경영·기술 관련 교육 수료"],
       },
