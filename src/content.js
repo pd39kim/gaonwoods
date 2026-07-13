@@ -100,7 +100,7 @@ export const content = {
       },
       {
         year: "2009",
-        items: ["김포시 대표 지주목 공장으로 공장 이전"],
+        items: ["김포시 공장 이전"],
       },
       {
         year: "1996",
