@@ -126,7 +126,7 @@ export const content = {
       },
       {
         src: "factory-inside-2.jpg",
-        caption: "지주목 가공 및 작업이 이루어지는 작업 공간",
+        caption: "지주목 가공이 이루어지는 작업 공간",
       },
       {
         src: "yard-warehouse.jpg",
@@ -134,7 +134,7 @@ export const content = {
       },
       {
         src: "factory-inside-3.jpg",
-        caption: "여유 있는 동선과 설비가 갖춰진 공장 내부 전경",
+        caption: "공장 내부 전경",
       },
       {
         src: "yard-stacks-1.jpg",
@@ -225,7 +225,7 @@ export const content = {
       },
     ],
     extraTitle: "부자재",
-    extra: ["화단 경계목", "방풍목", "쐐기목", "방부 지주목", "지주밴드", "코이어테이프", "쥬트테이프 등", "쐐기목"],
+    extra: ["화단 경계목", "방풍목", "방부 지주목", "지주밴드", "코이어테이프", "쥬트테이프"],
     specUnit: "단위: mm, 길이 × 지름 × 다리수",
     specNote: "※ 기타 규격, 방부 지주목, 쐐기목, 특수 규격은 별도 문의 바랍니다.",
   },
