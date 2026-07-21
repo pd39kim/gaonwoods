@@ -194,8 +194,8 @@ export const content = {
           {
             src: "square-support-4legs.jpg",
             alt: "사각 지주목 설치 예 1",
-            zoom: 1.8,
-            focus: "56% -1%",
+            zoom: 1.5,
+            focus: "58% 0%",
           },
           {
             src: "square-support-installed-2.jpg",
