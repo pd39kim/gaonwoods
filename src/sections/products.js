@@ -8,10 +8,12 @@ export function renderProducts() {
   const cards = products.categories
     .map((cat) => {
       const images = cat.images
-        .map(
-          (img) =>
-            `<div class="product-card__img"><img src="${photos[img.src]}" alt="${img.alt}" loading="lazy" /></div>`
-        )
+        .map((img) => {
+          const style = img.zoom
+            ? ` style="transform: scale(${img.zoom}); transform-origin: ${img.focus || "center"};"`
+            : "";
+          return `<div class="product-card__img"><img src="${photos[img.src]}" alt="${img.alt}" loading="lazy"${style} /></div>`;
+        })
         .join("");
       const specs = cat.specs.map((s) => `<li>${s}</li>`).join("");
 

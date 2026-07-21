@@ -192,8 +192,10 @@ export const content = {
         desc: "수목 보호와 구조 지지에 적합",
         images: [
           {
-            src: "square-support-installed-1.jpg",
+            src: "square-support-4legs.jpg",
             alt: "사각 지주목 설치 예 1",
+            zoom: 1.8,
+            focus: "56% -1%",
           },
           {
             src: "square-support-installed-2.jpg",
